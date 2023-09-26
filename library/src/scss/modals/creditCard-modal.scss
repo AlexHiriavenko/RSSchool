@@ -1,0 +1,133 @@
+.modal-content.modal__creditCard {
+    position: relative;
+    width: 640px;
+    max-height: 98vh;
+    max-width: 86vw;
+    overflow: auto;
+    padding: 0;
+}
+
+.modal-buyacard__btn {
+    background-color: #0C0C0E;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal-buyacard__title {
+    font-family: "Forum", cursive;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #0C0C0E;
+    padding: 20px 0;
+
+    @media (max-width: 640px) {
+        font-size: calc((100vw - 320px) / (640 - 320) * (40 - 20) + 20px);
+        padding-right: 10px;
+    }
+}
+
+.modal-buyacard__content {
+    display: flex;
+    padding: 30px 35px 40px 35px;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    gap: 20px;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.modal-buyacard__form {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.modal-buyacard__text {
+    width: 330px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: #8E8E8E;
+    max-width: 100%;
+}
+
+.modal-buyacard__form label {
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #000000;
+}
+
+.modal-buyacard__form label input {
+    height: 20px;
+    margin-top: 10px;
+    border: 1px solid #BB945F;
+    outline: none;
+    padding-left: 3px;
+}
+
+.modal-buyacard__form .exp-code {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-buyacard__form .exp-code input {
+    width: 45px;
+}
+
+.modal-buyacard__form label:nth-child(3)>input {
+    width: 45px;
+}
+
+.modal-buyacard__form .price-box {
+    display: flex;
+    margin-top: 10px;
+}
+
+.modal-buyacard__form .price-box__btn {
+    width: 75px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 1px;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        background-color: $accent-color;
+        border-color: $accent-color;
+    }
+}
+
+.modal-buyacard__form .price-box__price {
+    min-width: 90px;
+    margin-left: 25px;
+    color: #0C0C0E;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-self: flex-end;
+}

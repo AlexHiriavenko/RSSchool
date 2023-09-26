@@ -1,0 +1,28 @@
+<header>
+    <div class="header__wrapper">
+        <h1 class="header__logo">
+            <a href="#">Brooklyn Public Library</a>
+        </h1>
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li><a class="nav__link" href="#about">About</a></li>
+                <li><a class="nav__link" href="#favorites">Favorites</a></li>
+                <li>
+                    <a class="nav__link" href="#coffeeShop">Coffee shop</a>
+                </li>
+                <li><a class="nav__link" href="#contacts">Contacts</a></li>
+                <li>
+                    <a class="nav__link" href="#libraryCards">Library Card</a>
+                </li>
+            </ul>
+        </nav>
+        @@include('modals/logIn-menu.html', {})
+        <button class="btn-burger"> <span></span><span></span><span></span> </button>
+    </div>
+    <button class="btn-user-profile">
+        <div class="user-img active">
+            <img src="@img/header/icon_profile.svg" alt="user icon" width="28" height="28" />
+        </div>
+        <span class="user-initials"></span>
+    </button>
+</header>

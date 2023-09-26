@@ -1,0 +1,47 @@
+<div class="container-modal modal-register">
+    <div class="modal-content modal__register">
+        <btn class="btn-close-modal btn-close-register-modal">&#x2715;</btn>
+        <h4 class="modal-auth__title">REGISTER</h4>
+        <form id="register-form" class="modal-auth__form" action="#" novalidate="">
+            <label for="reg-name">First name</label>
+            <input id="reg-name" type="text" autocomplete="off" required />
+            <div class="tooltip hidden">
+                <span class="tooltip-inner">filled in incorrectly</span>
+            </div>
+            <label for="reg-lastname">Last name</label>
+            <input id="reg-lastname" type="text" autocomplete="off" required />
+            <div class="tooltip hidden">
+                <span class="tooltip-inner">filled in incorrectly</span>
+            </div>
+            <label for="reg-email">E-mail</label>
+            <input
+                id="reg-email"
+                type="email"
+                autocomplete="new-email"
+                required
+                pattern="^[A-Za-z0-9_\-]+@([A-Za-z0-9_\-])+\.([A-Za-z]{2,4})$"
+            />
+            <div class="tooltip hidden">
+                <span class="tooltip-inner">filled in incorrectly</span>
+            </div>
+            <label for="reg-password">Password</label>
+            <input
+                id="reg-password"
+                type="password"
+                autocomplete="new-password"
+                required
+                minlength="8"
+            />
+            <div class="tooltip hidden">
+                <span class="tooltip-inner">password must contain at least 8 characters</span>
+            </div>
+            <div class="modal-auth__btn-box">
+                <button class="modal-auth__btn modal-reg-btn" type="submit"> Sign Up </button>
+                <p class="modal-auth__error hidden"> A user with such an email already exists </p>
+            </div>
+        </form>
+        <p class="modal-auth__text">
+            Already have an account?&nbsp;&nbsp;&nbsp;<span class="add-log-btn">Login</span>
+        </p>
+    </div>
+</div>

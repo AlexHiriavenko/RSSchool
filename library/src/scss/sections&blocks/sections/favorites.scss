@@ -1,0 +1,305 @@
+.sticky {
+    @media (max-width: 1024px) {
+        background-color: #ffffff;
+        position: sticky;
+        top: 0;
+        z-index: 2
+    }
+}
+
+.favorites__subtitle {
+    font-weight: 700;
+    line-height: normal;
+}
+
+.radio-wrapper {
+
+    @media (max-width: 1024px) {
+        margin-top: 1px;
+    }
+
+    @media (max-width: 639px) {
+        max-width: 280px;
+        min-width: 260px;
+    }
+}
+
+.radio {
+    padding-block: 21px;
+
+    @media (max-width: 639px) {
+        margin-top: 20px;
+    }
+
+    display: inline-block;
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+
+        +.radio-label {
+            margin-right: 81px;
+
+            cursor: pointer;
+            padding: 5px 5px 5px 0;
+
+            @media (max-width: 765px) {
+                margin-right: 40px;
+            }
+
+            @media (max-width: 639px) {
+                font-size: calc((100vw - 320px) / (640 - 320) * (20 - 16) + 16px);
+            }
+
+            &:before {
+                content: "";
+                background: white;
+                border-radius: 100%;
+                border: 2px solid black;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                position: relative;
+                top: 2px;
+                right: 1px;
+                margin-right: 18px;
+
+                @media (max-width: 765px) {
+                    margin-right: 8px;
+                }
+
+                vertical-align: top;
+                cursor: pointer;
+                text-align: center;
+                transition: all 250ms ease;
+            }
+        }
+
+        &:checked {
+            +.radio-label {
+                font-weight: 700;
+
+                &:before {
+                    background-color: $main-color;
+                    box-shadow: inset 0 0 0 4px white;
+                }
+            }
+        }
+
+        &:focus {
+            +.radio-label {
+                &:before {
+                    outline: none;
+                    border-color: $main-color;
+                }
+            }
+        }
+
+        +.radio-label {
+            &:empty {
+                &:before {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+#lable-radio3 {
+    @media (max-width: 639px) {
+        margin-right: 30px;
+    }
+}
+
+.container-favorites-lists {
+    position: relative;
+    top: 0;
+    min-height: 1200px;
+
+    @media (min-width: 1025px) and (max-width: 1260px) {
+        min-height: 1400px;
+    }
+
+    @media (max-width: 1024px) {
+        min-height: 2400px;
+    }
+
+    @media (max-width: 639px) {
+        min-height: 2730px;
+    }
+}
+
+.books {
+    margin-top: 41px;
+    width: 100%;
+    padding-right: 40px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(330px, 550px));
+    column-gap: 10px;
+    row-gap: 40px;
+
+    @media (max-width: 1024px) {
+        justify-content: center;
+        grid-template-columns: minmax(240px, 550px);
+    }
+
+    @media (max-width: 639px) {
+        padding-right: 0;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        min-height: 555px;
+        padding: 15px 0 14px 19px;
+        border: 1px solid #000;
+
+        @media (max-width: 639px) {
+            padding-right: 10px;
+        }
+    }
+
+    &__pics {
+        display: inline-block;
+        position: relative;
+        font-family: "Forum", cursive;
+        max-width: max-content;
+        @include fontsDefault;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 58%;
+            background-color: $accent-color;
+        }
+    }
+
+    &__book-name {
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 2.67;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        @media (max-width: 639px) {
+            line-height: 1.6;
+        }
+    }
+
+    &__book-author {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 2.67;
+        letter-spacing: 2px;
+
+        @media (max-width: 639px) {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+    }
+
+    &__book-description {
+        margin-top: 20px;
+        max-width: 355px;
+        font-size: 15px;
+        line-height: 2.67;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+
+        @media (min-width: 1025px) and (max-width: 1260px) {
+            max-width: 298px;
+        }
+
+        @media (max-width: 639px) {
+            max-width: 100%;
+            font-size: calc((100vw - 320px) / (640 - 320) * (20 - 14) + 14px);
+            line-height: 1.8;
+        }
+    }
+
+    &__book-img {
+        position: absolute;
+        max-width: 37%;
+        height: auto;
+        bottom: -1px;
+        right: -40px;
+        z-index: 1;
+
+        @media (min-width: 1025px) and (max-width: 1260px) {
+            max-width: 32%;
+            right: 0;
+        }
+
+        @media (max-width: 639px) {
+            position: static;
+            max-width: 50%;
+        }
+    }
+
+    &__btn {
+        margin-top: auto;
+        width: 75px;
+        height: 30px;
+        border-radius: 2px;
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+        background-color: #ffffff;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1px;
+        transition-duration: 0.5s;
+
+        &:hover {
+            background-color: $accent-color;
+            border-color: $accent-color;
+            color: $secondary-color;
+        }
+
+        &--bought {
+            cursor: auto;
+            color: $accent-color;
+            border-color: $accent-color;
+            content: "own";
+
+            &:hover {
+                background-color: inherit;
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+.books--hidden {
+    position: absolute;
+    top: -40px;
+}
+
+.visibility-off {
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.visibility-on {
+    transition: opacity 1s 0.5s; // 0.5s секунда задержки перед появлением
+    opacity: 1;
+}
+
+.wrap-flex {
+    margin-top: auto;
+
+    @media (max-width: 639px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+}

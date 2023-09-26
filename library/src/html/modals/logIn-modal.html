@@ -1,0 +1,38 @@
+<div class="container-modal modal-logIn">
+    <div class="modal-content modal__logIn">
+        <btn class="btn-close-modal btn-close-logIn-modal">&#x2715;</btn>
+        <h4 class="modal-auth__title">LOGIN</h4>
+        <form id="login-form" class="modal-auth__form" action="#" novalidate="">
+            <label for="log-email">E-mail or readers card</label>
+            <input
+                id="log-email"
+                type="email"
+                autocomplete="new-email"
+                required
+                pattern="^[A-Za-z0-9_\-]+@([A-Za-z0-9_\-])+\.([A-Za-z]{2,4})$"
+            />
+            <div class="tooltip hidden">
+                <span class="tooltip-inner"></span>
+            </div>
+            <label for="log-password">Password</label>
+            <input
+                id="log-password"
+                type="password"
+                autocomplete="new-password"
+                required=""
+                minlength="8"
+            />
+            <div class="tooltip hidden">
+                <span class="tooltip-inner"></span>
+            </div>
+            <div class="modal-auth__btn-box">
+                <button class="modal-auth__btn modal-log-btn" type="submit"> Log In </button>
+                <p class="modal-auth__error mail hidden">User not found</p>
+                <p class="modal-auth__error pswrd hidden">Incorrect Password</p>
+            </div>
+        </form>
+        <p class="modal-auth__text">
+            Don't have an account?&nbsp;&nbsp;&nbsp;<span class="add-reg-btn">Register</span>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,145 @@
+#about {
+    padding-bottom: 34px;
+}
+
+.about__text-content {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 20px;
+
+    @media (max-width: 639px) {
+        font-size: calc((100vw - 320px)/(640 - 320) * (20 - 16) + 16px);
+    }
+}
+
+.about-list__wrapper {
+    @include sb-flex;
+    gap: 10px;
+    position: relative;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        max-width: 614px;
+    }
+}
+
+.btn-pagination {
+    margin-top: 38px;
+    display: none;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+
+    &:hover {
+        color: $accent-color;
+    }
+
+    @media (max-width: 1024px) {
+        display: block;
+    }
+
+}
+
+.wrapper-photos-list {
+    overflow: hidden;
+}
+
+.photos-list {
+    max-width: 1400px;
+    display: flex;
+    column-gap: 1.7%;
+    transition-duration: 0.5s;
+    position: relative;
+    right: 0;
+
+    &-item {
+        min-width: 32.2%;
+    }
+
+    &-item img {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        max-height: 560px;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 450px;
+
+        &-item {
+            min-width: 100%;
+        }
+    }
+}
+
+.photos-list.first {
+    right: 0;
+}
+
+.photos-list.second {
+    right: 34%;
+
+    @media (max-width: 1024px) {
+        right: 102%;
+    }
+}
+
+.photos-list.third {
+    right: 68%;
+
+    @media (max-width: 1024px) {
+        right: 204%;
+    }
+}
+
+.photos-list.fourth {
+    @media (max-width: 1024px) {
+        right: 306%;
+    }
+}
+
+.photos-list.fifth {
+    @media (max-width: 1024px) {
+        right: 408%;
+    }
+}
+
+.btn-group {
+    text-align: center;
+    margin-top: 36px;
+    @include center-flex;
+
+    @media (max-width: 1024px) {
+        margin-top: 20px;
+    }
+}
+
+.btn-wrapper {
+    width: 26px;
+    height: 26px;
+    background-color: #ffffff;
+
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+        display: none;
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
+    }
+}
+
+.btn-carousel {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.btn-carousel--active {
+    background-color: $accent-color;
+}

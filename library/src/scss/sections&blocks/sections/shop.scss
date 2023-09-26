@@ -1,0 +1,100 @@
+.shop__text {
+    text-align: center;
+    margin-bottom: 1px;
+
+    @media (max-width: 639px) {
+        font-size: calc((100vw - 320px)/(640 - 320) * (20 - 16) + 16px);
+    }
+}
+
+.goods {
+    margin-top: 41px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(356px, 483px));
+    column-gap: 10px;
+    row-gap: 40px;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: minmax(200px, 100%);
+        justify-content: start;
+    }
+
+    &__title {
+        color: $accent-color;
+        font-family: "Forum", cursive;
+        font-size: 40px;
+        line-height: 1;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+
+        @media (max-width: 639px) {
+            font-size: calc((100vw - 320px)/(639 - 320) * (40 - 30) + 30px);
+        }
+    }
+
+    &__item {
+        margin-top: 40px;
+        @include sb-flex;
+        max-width: 100%;
+    }
+
+    &__product-name {
+        min-width: 73.4%;
+        padding-right: 25%;
+        @include fontsDefault;
+
+        @media (max-width: 639px) {
+            font-size: calc((100vw - 320px)/(640 - 320) * (20 - 14) + 14px);
+            min-width: 50%;
+            padding-right: 23%;
+        }
+    }
+
+    &__product-price {
+        position: relative;
+        min-width: 31px;
+
+        font-family: "Forum", cursive;
+        @include fontsDefault;
+
+        @media (max-width: 639px) {
+            font-size: calc((100vw - 320px)/(640 - 320) * (20 - 16) + 16px);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            max-width: 100px;
+            height: 1px;
+            background-color: $accent-color;
+            top: 50%;
+            right: 90px;
+
+            @media (min-width: 1025px) {
+                width: calc((100vw - 1024px) / (1440 - 1024) * (100 - 50) + 50px);
+            }
+
+            @media (max-width: 639px) {
+                width: calc((100vw - 320px) / (639 - 320) * (100 - 50) + 50px);
+                right: 40px;
+            }
+        }
+    }
+}
+
+.cakes {
+    max-width: 483px;
+    text-align: end;
+
+    @media (max-width: 1024px) {
+        width: 483px;
+        max-width: 100%;
+        justify-self: end;
+    }
+}
+
+.drinks {
+    max-width: 447px;
+}

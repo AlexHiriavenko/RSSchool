@@ -1,0 +1,17 @@
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin sb-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin fontsDefault {
+    line-height: 2;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}

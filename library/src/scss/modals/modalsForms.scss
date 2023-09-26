@@ -1,0 +1,126 @@
+.modal-auth__form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-auth__text {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    color: #000000;
+    text-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.16);
+    margin-top: 10px;
+}
+
+.modal-auth__form label {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.modal-auth__form input {
+    margin-top: 10px;
+    border: 1px solid #bb945f;
+    height: 20px;
+    outline: none;
+    padding: 0 3px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.tooltip {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    top: 3px;
+}
+
+.modal-auth__btn-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-auth__btn {
+    width: 75px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #0c0c0e;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 1px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        color: $secondary-color;
+    }
+}
+
+.modal-auth__error {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    color: red;
+    width: 110px;
+    align-self: center;
+}
+
+.tooltip span {
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    line-height: 10px;
+    background-color: #f2f0f0;
+    padding-left: 3px;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.22);
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        z-index: 20;
+        border-top: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid #f2f0f0;
+        top: -10px;
+    }
+}
+
+.modal-auth__text span {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,81 @@
+.container-modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(41, 41, 41, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: 0.2s;
+    z-index: 3;
+}
+
+.modal-register,
+.modal-logIn,
+.modal-profile,
+.modal-creditCard {
+    opacity: 0;
+}
+
+.modal-register.active,
+.modal-logIn.active,
+.modal-profile.active,
+.modal-creditCard.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    display: flex;
+    min-width: 250px;
+    min-height: max-content;
+    max-height: 100vh;
+    transition-duration: 0.5s;
+    padding: 20px 25px;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.modal__register,
+.modal__logIn,
+.modal__profile,
+.modal__creditCard {
+    transform: scale(0.5);
+}
+
+.modal__register.active,
+.modal__logIn.active,
+.modal__profile.active,
+.modal__creditCard.active {
+    transform: scale(1);
+}
+
+.btn-close-modal {
+    transition-duration: 0.5s;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: 900;
+    cursor: pointer;
+
+    &:hover {
+        color: $accent-color;
+        background-color: lightgray;
+    }
+}
+
+.modal-auth__title {
+    font-family: "Forum", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    align-self: center;
+}

@@ -1,0 +1,68 @@
+<section id="libraryCards">
+    <h2 class="section-title">Digital Library Cards</h2>
+    <div class="cards__wrapper">
+        <div class="find-card">
+            <h3 class="find-card__title">Find your Library card</h3>
+            <form id="cardForm" class="form">
+                <div class="form__wrapper">
+                    <h4 class="form__title">Brooklyn Public Library</h4>
+                    <input
+                        class="form__title form__input user-name"
+                        type="text"
+                        placeholder="Reader's name"
+                        pattern="[A-Za-zА-Яа-я\s]+"
+                        required />
+                    <input
+                        class="form__title form__input card-number"
+                        type="text"
+                        placeholder="Card number"
+                        minlength="9"
+                        maxlength="9"
+                        required />
+                </div>
+                <input
+                    class="check-card active"
+                    type="submit"
+                    value="Check the card" />
+                <ul class="card-data">
+                    <li class="card-data__item">
+                        <p class="card-data__name">Visits</p>
+                        <img
+                            class="card-data__icon"
+                            src="@img/card/userIconGold.svg"
+                            alt="icon-visits" />
+                        <p class="card-data__count card-visits-count">2</p>
+                    </li>
+                    <li class="card-data__item">
+                        <p class="card-data__name">Bonuses</p>
+                        <img
+                            class="card-data__icon"
+                            src="@img/card/Star.svg"
+                            alt="icon-bonuses" />
+                        <p class="card-data__count card-bonuses-count">1240</p>
+                    </li>
+                    <li class="card-data__item">
+                        <p class="card-data__name">Books</p>
+                        <img
+                            class="card-data__icon"
+                            src="@img/card/book.svg"
+                            alt="icon-books" />
+                        <p class="card-data__count card-books-count">0</p>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="get-card">
+            <h3 class="get-card__title">Get a reader card</h3>
+            <p class="get-card__text">
+                You will be able to see a reader card after logging into account
+                or you can register a new account
+            </p>
+            <div class="get-card__btn-group">
+                <button class="get-card__btn register active">Sign Up</button>
+                <button class="get-card__btn login active">Log in</button>
+                <button class="get-card__btn profile">Profile</button>
+            </div>
+        </div>
+    </div>
+</section>

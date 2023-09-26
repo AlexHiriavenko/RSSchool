@@ -1,0 +1,158 @@
+.modal-content.modal__profile {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    width: 600px;
+    max-width: 100vw;
+    background-color: #FFFFFF;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.modal-profile__user {
+    width: 170px;
+    background-color: #0C0C0E;
+    display: flex;
+    flex-direction: column;
+    padding-top: 139px;
+    align-items: center;
+}
+
+.modal-profile__content {
+    width: 430px;
+    max-width: 72%;
+    padding: 40px 20px 39px 20px;
+}
+
+.modal-profile__photo {
+    width: 80px;
+    height: 80px;
+    background-color: #FFFFFF;
+    color: #BB945F;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-profile__name {
+    width: 120px;
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+
+.modal-profile__title {
+    font-family: "Forum", cursive;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.modal-profile__stat {
+    margin-top: 40px;
+    display: flex;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+}
+
+.modal-profile__stat .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.modal-profile__stat .stat__name {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    color: #000000;
+}
+
+.modal-profile__stat .stat__icon {
+    width: 20px;
+    height: 21px;
+}
+
+.modal-profile__stat .stat__count {
+    color: #000000;
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+
+.modal-profile__subtitle {
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 20px;
+}
+
+.modal-profile__booklist {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-left: 29px;
+    width: 380px;
+    height: 70px;
+    overflow: auto;
+    position: relative;
+}
+
+.modal-profile__card-box {
+    margin-top: 30px;
+    display: flex;
+    line-height: 1;
+    color: #0C0C0E;
+}
+
+.modal-profile .copy-tooltip {
+    color: #8E8E8E;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 4px;
+    padding-left: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    margin-left: 5px;
+}
+
+.copy-tooltip.active {
+    opacity: 1;
+}
+
+.modal-profile__card-number {
+    color: #BB945F;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.modal-profile__copy-number-btn {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.no-books {
+    display: none;
+    margin-top: 10px;
+    color: gray;
+}
+
+.no-books.active {
+    display: block;
+}

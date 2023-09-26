@@ -1,0 +1,11 @@
+@import "reset";
+@import "mixins";
+@import "variables";
+@import "modals/login-menu";
+@import "modals/modals";
+@import "modals/modalsForms";
+@import "modals/profile-modal";
+@import "modals/creditCard-modal.scss";
+
+@import "sections&blocks/general";
+// здесь мы ничего не пишем, стили писать в /sections&blocks например /sections&blocks/header.scss
