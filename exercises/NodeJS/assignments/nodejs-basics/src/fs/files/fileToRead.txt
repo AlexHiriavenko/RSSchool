@@ -1,0 +1,1 @@
+now you see the contents of the file: fileToRead.txt

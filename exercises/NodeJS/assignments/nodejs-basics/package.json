@@ -1,0 +1,39 @@
+{
+  "name": "nodejs-basics",
+  "version": "1.0.0",
+  "description": "nodejs-basics-exercises",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "createFile": "node ./src/fs/create.js",
+    "copyFiles": "node ./src/fs/copy.js",
+    "renameFile": "node ./src/fs/rename.js",
+    "deleteFile": "node ./src/fs/delete.js",
+    "printFolderContent" : "node ./src/fs/list.js",
+    "printFileContent": "node ./src/fs/read.js",
+    "envVarRSS": "node ./src/cli/env.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexHiriavenko/nodejs-assignments.git#main"
+  },
+  "keywords": [
+    "nodejs",
+    "basic",
+    "fs",
+    "cli",
+    "modules",
+    "hash",
+    "streams",
+    "zlib",
+    "worker-threads",
+    "child",
+    "processes"
+  ],
+  "author": "alex-hiriavenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexHiriavenko/nodejs-assignments/issues"
+  },
+  "homepage": "https://github.com/AlexHiriavenko/nodejs-assignments/tree/main#readme"
+}
