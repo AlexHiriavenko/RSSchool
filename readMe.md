@@ -1,9 +1,19 @@
-## RSSchool repo
+# My RSSchool repo
 
-### projects folder
+## Projects
 
-projects made as part of training on the RSSchool Frontend course
+#### url Library project
 
 ### exercises folder
 
-exercises and tasks completed as part of the Frontend RSSchool course
+#### url Audio Player project
+
+https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/audio-player/
+
+#### CSS-Slider project
+
+https://css-slider.netlify.app/
+
+https://AlexHiriavenko.github.io/projects/cssMemeSlider
+
+## exercises

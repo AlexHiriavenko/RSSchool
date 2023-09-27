@@ -1,7 +1,6 @@
 import { btnBurger, navbar } from "../variables/variables.js";
 
 function setModalVisible(event) {
-    console.log("test");
     const isModal = event.target.closest(".header__nav");
     const isBtnBurger = event.target.closest(".btn-burger");
     if (!isModal && !isBtnBurger) {
