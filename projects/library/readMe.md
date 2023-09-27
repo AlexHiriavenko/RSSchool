@@ -10,4 +10,4 @@ https://rolling-scopes-school.github.io/tsmika-JSFEPRESCHOOL2023Q2/library/
 
 -   Part_2: https://github.com/rolling-scopes-school/tasks/blob/master/tasks/library/library-part2.md
 
--   Part3: https://github.com/rolling-scopes-school/tasks/blob/master/tasks/library/library-part3.md
+-   Part_3: https://github.com/rolling-scopes-school/tasks/blob/master/tasks/library/library-part3.md
