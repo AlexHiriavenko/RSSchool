@@ -2,6 +2,7 @@ import {
     btnCardsLogin,
     btnCardsRegister,
     btnCardsProfile,
+    btnsBuy,
     userInitials,
     userImg,
     toProfileOption,
@@ -34,6 +35,11 @@ function setStateAfterLogOut() {
     btnCheckCard.classList.add(active);
     readerCardTitle.textContent = defaultCardTitle;
     readercardText.textContent = defaultCardText;
+    for (const btn of btnsBuy) {
+        btn.textContent = "Buy";
+        btn.classList.remove("books__btn--bought");
+        btn.disabled = false;
+    }
 }
 
 export default setStateAfterLogOut;

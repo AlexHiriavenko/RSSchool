@@ -2,9 +2,10 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding: 0;
     width: 600px;
-    max-width: 100vw;
+    max-width: 94vw;
     background-color: #FFFFFF;
     max-height: 90vh;
     overflow: auto;
@@ -17,12 +18,21 @@
     flex-direction: column;
     padding-top: 139px;
     align-items: center;
+
+    @media (max-width: 640px) {
+        display: none;
+    }
 }
 
 .modal-profile__content {
     width: 430px;
     max-width: 72%;
     padding: 40px 20px 39px 20px;
+
+    @media (max-width: 640px) {
+        max-width: none;
+        width: 100%;
+    }
 }
 
 .modal-profile__photo {
@@ -57,6 +67,10 @@
     letter-spacing: 0.8px;
     color: #000000;
     text-transform: uppercase;
+
+    @media (max-width:640px) {
+        text-align: center;
+    }
 }
 
 .modal-profile__stat {
@@ -64,6 +78,10 @@
     display: flex;
     -moz-column-gap: 20px;
     column-gap: 20px;
+
+    @media (max-width:640px) {
+        justify-content: center;
+    }
 }
 
 .modal-profile__stat .stat {
@@ -96,6 +114,10 @@
     margin-top: 20px;
     font-size: 25px;
     line-height: 20px;
+
+    @media (max-width: 640px) {
+        text-align: center;
+    }
 }
 
 .modal-profile__booklist {
@@ -105,16 +127,29 @@
     row-gap: 10px;
     padding-left: 29px;
     width: 380px;
+    max-width: 100%;
     height: 70px;
     overflow: auto;
     position: relative;
+
+    @media (max-width: 640px) {
+        width: 100%;
+        font-size: 16px;
+        padding-left: 0;
+    }
 }
 
 .modal-profile__card-box {
     margin-top: 30px;
     display: flex;
+    align-items: center;
     line-height: 1;
     color: #0C0C0E;
+    min-width: 280px;
+
+    @media (max-width: 640px) {
+        justify-content: center;
+    }
 }
 
 .modal-profile .copy-tooltip {
@@ -155,4 +190,8 @@
 
 .no-books.active {
     display: block;
+}
+
+.btn-close-profile-modal {
+    padding: 2px;
 }

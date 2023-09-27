@@ -12,17 +12,12 @@ import {
     logOutOption,
     toProfileOption,
     inputUserName,
-    readerCardTitle,
-    readercardText,
 } from "../variables/variables.js";
 import { openModal } from "./modals.js";
 import setStateAfterLogOut from "./setStateAfterLogOut.js";
 
 btnUserProfile.addEventListener("click", toggleLoginMenu);
-btnUserProfile.addEventListener(
-    "mouseover",
-    () => (btnUserProfile.title = inputUserName.value)
-);
+btnUserProfile.addEventListener("mouseover", () => (btnUserProfile.title = inputUserName.value));
 
 function toggleLoginMenu(event) {
     const target = event.target.closest("button");
@@ -94,26 +89,20 @@ export function setUserProfileModal() {
     const firstName = user.firstName;
     const lastName = user.lastName;
     const userInitials = firstName[0].toUpperCase() + lastName[0].toUpperCase();
-    const modalProfileInitials = modalProfile.querySelector(
-        ".modal-profile__photo"
-    );
+    const modalProfileInitials = modalProfile.querySelector(".modal-profile__photo");
     modalProfileInitials.textContent = userInitials;
     const modalProfileName = modalProfile.querySelector(".modal-profile__name");
     modalProfileName.textContent = firstName + " " + lastName;
     const visits = modalProfile.querySelector(".stat__visits");
     const bonus = modalProfile.querySelector(".stat__bonuses");
     const books = modalProfile.querySelector(".stat__books");
-    const cardNumber = modalProfile.querySelector(
-        ".modal-profile__card-number"
-    );
+    const cardNumber = modalProfile.querySelector(".modal-profile__card-number");
     visits.textContent = user.visitsCounter;
     bonus.textContent = user.bonusCounter;
     books.textContent = user.booksCounter;
     cardNumber.textContent = user.userID;
     renderBooksList(user);
-    const btnCopy = modalProfile.querySelector(
-        ".modal-profile__copy-number-btn"
-    );
+    const btnCopy = modalProfile.querySelector(".modal-profile__copy-number-btn");
     btnCopy.addEventListener("click", () => copyCardNumber(user.userID));
 }
 
@@ -127,15 +116,16 @@ function copyCardNumber(id) {
 function renderBooksList(user) {
     const ul = modalProfile.querySelector(".modal-profile__booklist");
 
-    if (!user.booksList.length) {
+    if (!user?.booksList?.length) {
         const noBooks = modalProfile.querySelector(".no-books");
         noBooks.classList.add("active");
     } else {
-        ul.innerHTML = ""; // Очищаем список, чтобы избежать дублирования элементов
-        user.booksList.forEach((book) => {
-            const li = document.createElement("li");
-            li.textContent = `${book.author}: ${book.name}`;
-            ul.appendChild(li);
-        });
+        ul.innerHTML = "";
+        if (user?.booksList?.length)
+            user.booksList.forEach((book) => {
+                const li = document.createElement("li");
+                li.textContent = `${book.author}: ${book.name}`;
+                ul.appendChild(li);
+            });
     }
 }

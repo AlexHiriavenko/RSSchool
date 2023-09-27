@@ -44,12 +44,13 @@ export default function setStateAfterLogIn(mail) {
     readerCardTitle.textContent = authCardTitle;
     readercardText.textContent = authCardText;
     for (const btn of btnsBuy) {
-        user.booksList.forEach((book) => {
-            if (book.bookID === btn.id) {
-                btn.classList.add("books__btn--bought");
-                btn.textContent = "Own";
-                btn.disabled = true;
-            }
-        });
+        if (user?.booksList?.length)
+            user.booksList.forEach((book) => {
+                if (book.bookID === btn.id) {
+                    btn.classList.add("books__btn--bought");
+                    btn.textContent = "Own";
+                    btn.disabled = true;
+                }
+            });
     }
 }
