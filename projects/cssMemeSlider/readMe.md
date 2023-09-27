@@ -4,6 +4,7 @@ css Slider
 
 ## URL:
 
+https://css-slider.netlify.app/
 https://AlexHiriavenko.github.io/projects/cssMemeSlider
 
 ## Task and Terms:

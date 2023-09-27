@@ -12,7 +12,7 @@ https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/audio
 
 #### CSS-Slider project
 
-https://AlexHiriavenko.github.io/cssMemeSlider/cssMemeSlider/index.html
+https://css-slider.netlify.app/
 
 https://AlexHiriavenko.github.io/projects/cssMemeSlider
 
