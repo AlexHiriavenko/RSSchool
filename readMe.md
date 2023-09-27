@@ -14,4 +14,6 @@ https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/audio
 
 https://AlexHiriavenko.github.io/cssMemeSlider/cssMemeSlider/index.html
 
+https://AlexHiriavenko.github.io/projects/cssMemeSlider
+
 ## exercises

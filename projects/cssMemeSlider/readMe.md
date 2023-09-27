@@ -4,7 +4,7 @@ css Slider
 
 ## URL:
 
-https://AlexHiriavenko.github.io/cssMemeSlider/cssMemeSlider/index.html
+https://AlexHiriavenko.github.io/projects/cssMemeSlider
 
 ## Task and Terms:
 
