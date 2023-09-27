@@ -1,13 +1,9 @@
-## My RSSchool private repo
+## RSSchool repo
 
-### Library project
+### projects folder
 
-#### url:
+projects made as part of training on the RSSchool Frontend course
 
-https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/library/
+### exercises folder
 
-### Audio Player project
-
-#### url:
-
-https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/audio-player/
+exercises and tasks completed as part of the Frontend RSSchool course
