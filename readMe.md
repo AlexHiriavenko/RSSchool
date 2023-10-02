@@ -2,32 +2,14 @@
 
 ## Projects
 
-#### url Library project
+-   Library project
 
-### exercises folder
+-   Audio Player project
 
-#### url Audio Player project
+-   CSS-Slider project
 
-https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/audio-player/
+-   Image-Gallery project
 
-#### CSS-Slider project
+## Exercises
 
-https://css-slider.netlify.app/
-
-https://AlexHiriavenko.github.io/projects/cssMemeSlider
-
-#### Image-Gallery project
-
-##### url:
-
-https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/image-gallery/
-
-##### task
-
-https://github.com/rolling-scopes-school/tasks/blob/master/tasks/js30%23/js30-5.md
-
-##### tegs
-
-fetch, unsplash-api
-
-## exercises
+see more in according Folder
