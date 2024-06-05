@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alex CV</title>
+        <link rel="icon" href="./img/favicon-cv.png" type="image/png" sizes="32x32">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="header__avatar">
+                    <img
+                        src="./img/user-photo.jpg"
+                        alt="person photo"
+                        width="54"
+                        height="54"
+                        class="avatar__img"
+                >
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li>
+                            <a class="nav-link" href="#summary">Summary</a>
+                        </li>
+
+                        <li>
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+
+                        <li>
+                            <a class="nav-link" href="#edu">Education</a>
+                        </li>
+
+                        <li>
+                            <a class="nav-link" href="#exp">Experience</a>
+                        </li>
+
+                        <li>
+                            <a class="nav-link" href="#code">Code</a>
+                        </li>
+
+                        <li>
+                            <a class="nav-link cert" href="./pages/certificates.html"
+                                >Certificates</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <a
+                    id="pdfLink"
+                    class="load-pdf"
+                    href="./pdf/Alex_Frontend_CV.pdf"
+                    download
+                    target="_blank"
+                >
+                    <div><span class="arrow">&#129095;</span>PDF</div>
+                </a>
+                <button class="burger-btn">Menu</button>
+            </header>
+
+            <main>
+                <h1 class="cv-title">Alex Hiriavenko</h1>
+
+                <h2 id="summary" class="cv-subtitle">Frontend Developer</h2>
+
+                <a class="load-pdf" href="./pdf/Alex_Frontend_CV.pdf" download>
+                    <div>
+                        <span class="arrow">&#129095;</span>CV<br>
+                        <span class="pdf">PDF</span>
+                    </div>
+                </a>
+                <section>
+                    <h3 class="section-title">Summary</h3>
+
+                    <p class="about-text">
+                        Developer who is passionate about front-end and programming in general.
+                        Participant of the IT generation project with the support of the Ministry of
+                        Digital Policy of Ukraine. I have the necessary technology stack to develop
+                        modern applications and user interfaces
+                    </p>
+                </section>
+
+                <section class="projects">
+                    <h3 class="section-title">Projects</h3>
+
+                    <ul>
+                        <li class="projects__item">
+                            <h4 class="projects__item-title"> - Social Network: </h4>
+
+                            <div class="projects__item-description">
+                                <div class="projects__item-description-wrapper">
+                                    <p class="projects__item-description-text">
+                                        The APP
+                                        <span>is still under development </span>
+                                        But you can already see how it works.<br>
+                                        React app with server and database. Backend is written in
+                                        Java. Social network with all the necessary functionality.
+                                        Created according to the Facebook template.<br>
+                                        Note: for login check
+                                        <a
+                                            target="_blank"
+                                            class="projects__item-link"
+                                            href="https://github.com/AlexHiriavenko/social-network/blob/develop/README.md"
+                                            >this link</a
+                                        >
+                                    </p>
+
+                                    <div>
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://fs-social-network.netlify.app/"
+                                            target="_blank"
+                                            >website link</a
+                                        >
+
+                                        /
+
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://github.com/AlexHiriavenko/social-network/tree/develop"
+                                            target="_blank"
+                                            >repository link</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="projects__img-wrapper">
+                                    <a
+                                        class="projects__item-link projects__item-link--hover"
+                                        href="https://fs-social-network.netlify.app/"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="./img/social-network.jpg"
+                                            alt="preview"
+                                            width="200"
+                                    >
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projects__item">
+                            <h4 class="projects__item-title"> - Privilege Handmade: </h4>
+
+                            <div class="projects__item-description">
+                                <div class="projects__item-description-wrapper">
+                                    <p class="projects__item-description-text">
+                                        React app. Online Store. Add item to cart/favorites, remove
+                                        item from cart/favorites. Order form and validation. Two
+                                        types display mode: gallery and table. Counting the number
+                                        of items in the shopping cart and favorites, counting order
+                                        amount.
+                                    </p>
+
+                                    <div>
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://privilege-handmade.netlify.app/"
+                                            target="_blank"
+                                            >website link</a
+                                        >
+
+                                        /
+
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://github.com/AlexHiriavenko/React-onlineStore-HandMade"
+                                            target="_blank"
+                                            >repository link</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="projects__img-wrapper">
+                                    <a
+                                        class="projects__item-link projects__item-link--hover"
+                                        href="https://privilege-handmade.netlify.app/"
+                                        target="_blank"
+                                    >
+                                        <img src="./img/hand-made.png" alt="preview" width="200">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h4 class="projects__item-title"> - Medical Portal: </h4>
+
+                            <div class="projects__item-description">
+                                <div class="projects__item-description-wrapper">
+                                    <p class="projects__item-description-text">
+                                        Virtual office for creating, deleting and editing clinic
+                                        visits with a search filter.Responsive, Authorization, AJAX,
+                                        HTTP methods, Bootstrap, Gulp. Written in JS classes.
+
+                                        <br>
+                                        Note: for login check
+
+                                        <a
+                                            target="_blank"
+                                            class="projects__item-link"
+                                            href="https://github.com/AlexHiriavenko/MedicalPortal-JS-Bstrap-Auth/blob/main/How.Run.Project.md"
+                                            >this link</a
+                                        >
+                                    </p>
+
+                                    <div>
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://medical-portal.netlify.app/"
+                                            target="_blank"
+                                            >website link</a
+                                        >
+
+                                        /
+
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://github.com/AlexHiriavenko/MedicalPortal-JS-Bstrap-Auth"
+                                            target="_blank"
+                                            >repository link</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="projects__img-wrapper">
+                                    <a
+                                        class="projects__item-link projects__item-link--hover"
+                                        href="https://medical-portal.netlify.app/"
+                                        target="_blank"
+                                    >
+                                        <img src="./img/medical.png" alt="preview" width="200">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h4 class="projects__item-title">- Forcio:</h4>
+
+                            <div class="projects__item-description">
+                                <div class="projects__item-description-wrapper">
+                                    <p class="projects__item-description-text">
+                                        Responsive design web page. Building the project using gulp.
+                                        scss, media queries, scss variables and mixins.BEM.
+                                    </p>
+
+                                    <div>
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://alexhiriavenko.github.io/Forkio-responsive-gulp/"
+                                            target="_blank"
+                                            >website link</a
+                                        >
+
+                                        /
+
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://github.com/AlexHiriavenko/Forkio-responsive-gulp"
+                                            target="_blank"
+                                            >repository link</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="projects__img-wrapper">
+                                    <a
+                                        class="projects__item-link projects__item-link--hover"
+                                        href="https://alexhiriavenko.github.io/Forkio-responsive-gulp/"
+                                        target="_blank"
+                                    >
+                                        <img src="./img/forcio.jpg" alt="preview" width="200">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h4 class="projects__item-title"> - Brooklyn Library: </h4>
+
+                            <div class="projects__item-description">
+                                <div class="projects__item-description-wrapper">
+                                    <p class="projects__item-description-text">
+                                        JS: burger, modals, slider, switching tabs, validation
+                                        forms, local storage, user profile, login/unlogin state,
+                                        online store.
+                                        <br>
+                                        <br>
+                                        CSS: pixel perfect, flex, grid, animation, media-queries.
+                                    </p>
+
+                                    <div>
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/library/"
+                                            target="_blank"
+                                            >website link</a
+                                        >
+
+                                        /
+
+                                        <a
+                                            class="projects__item-link"
+                                            href="https://github.com/AlexHiriavenko/RSSchool/tree/main/projects/library"
+                                            target="_blank"
+                                            >repository link</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="projects__img-wrapper">
+                                    <a
+                                        class="projects__item-link projects__item-link--hover"
+                                        href="https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/library/"
+                                        target="_blank"
+                                    >
+                                        <img src="./img/library.jpg" alt="preview" width="200">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="experience" id="exp">
+                    <h3 class="section-title">Experience</h3>
+
+                    <ul class="exp__list">
+                        <li class="exp__item">
+                            <h4 class="exp__title-item"> FRONT END DEVELOPER INTERNSHIP </h4>
+
+                            <h5 class="exp__subtitle">DAN.IT (11 month)</h5>
+
+                            <p class="exp__text">
+                                Four modules completed during the year. Successfully completed five
+                                projects (all scores above 90%) using the stack of technologies
+                                mentioned above. Gained experience of working in a team (2, 3, 9
+                                people). In one of the projects, I served as a team lead.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="experience">
+                    <h3 class="section-title">Previous Experience</h3>
+
+                    <ul class="exp__list">
+                        <li class="exp__item">
+                            <h4 class="exp__title-item">PURCHASING MANAGER</h4>
+
+                            <h5 class="exp__subtitle"> VHH Group 2019 - present </h5>
+
+                            <p class="exp__text">
+                                Provision of production with the necessary equipment, components,
+                                tools, materials. Market analysis, conclusion of contracts, quality
+                                control of goods and services.
+                            </p>
+                        </li>
+
+                        <li class="exp__item">
+                            <h4 class="exp__title-item"> CATEGORY PURCHASING MANAGER </h4>
+
+                            <h5 class="exp__subtitle">LLC "Effect"</h5>
+
+                            <p class="exp__text">
+                                Сoncluding contracts for the purchase of goods, increasing sales and
+                                turnover in the assigned category, improving inventory turnover.
+                                Demand forecast, market trend analysis
+                            </p>
+                        </li>
+
+                        <li class="exp__item">
+                            <h4 class="exp__title-item"> MARKETING SPECIALIST </h4>
+
+                            <h5 class="exp__subtitle">Amstor Retail Group</h5>
+
+                            <p class="exp__text"> Product promotion and sales increase </p>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+
+            <aside>
+                <div class="avatar">
+                    <img
+                        src="./img/user-photo.jpg"
+                        alt="person photo"
+                        width="180"
+                        height="180"
+                        class="avatar__img"
+                >
+
+                    <p class="avatar__message" id="contacts">
+                        <span class="avatar__name">I'm Alex.</span>
+
+                        <span class="avatar__greetings">Hello!</span>
+                    </p>
+                </div>
+
+                <section class="contacts">
+                    <h3 class="section-title">
+                        <span>Contacts</span>
+
+                        <span>&#9743;</span>
+                    </h3>
+
+                    <ul class="contacts__list sidebar__list">
+                        <li>
+                            <a href="tel:+380504716006" class="contacts__link">
+                                <img src="./img/icons/phone.svg" alt="phone icon" width="20">
+
+                                <span>+3(8050) 471-60-06</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+380984625714" class="contacts__link">
+                                <img src="./img/icons/phone.svg" alt="phone icon" width="20">
+
+                                <span>+3(8098) 46-25-714</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:martmarchmartmarch@gmail.com" class="contacts__link">
+                                <img src="./img/icons/email.svg" alt="mail icon" width="22">
+
+                                <span> martmarchmartmarch@<span>gmail.com</span> </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/oleksii-hiriavenko/"
+                                class="contacts__link"
+                                target="_blank"
+                            >
+                                <img
+                                    src="./img/icons/linkedin.svg"
+                                    alt="linkedin icon"
+                                    width="20"
+                            >
+
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://t.me/AlexHiriavenko"
+                                class="contacts__link"
+                                target="_blank"
+                            >
+                                <img
+                                    src="./img/icons/telegram.svg"
+                                    alt="linkedin icon"
+                                    width="20"
+                            >
+
+                                <span>Telegram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/AlexHiriavenko"
+                                class="contacts__link"
+                                target="_blank"
+                            >
+                                <img src="./img/icons/github.svg" alt="linkedin icon" width="20">
+
+                                <span>Github</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="skills sidebar-section" id="skills">
+                    <h3 class="section-title">
+                        <span>Skills</span>
+
+                        <img src="./img/icons/Ninja.svg" alt="Ninja" width="18">
+                    </h3>
+
+                    <ul class="skills__list sidebar__list">
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>HTML</span>
+                        </li>
+
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>CSS, SCSS, Bootstrap, BEM</span>
+                        </li>
+
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>JavaScript, TypeScript</span>
+                        </li>
+
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>
+                                React; Redux
+
+                                <span class="skills__item-brackets">(Thunk & Toolkit)</span>
+
+                                , MUI, Router, Formik, etc
+                            </span>
+                        </li>
+
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>Nodejs (basics)</span>
+                        </li>
+
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>Figma, Trello</span>
+                        </li>
+
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>Git, GitHub/GitLab</span>
+                        </li>
+
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>Heroku, Swagger, Postman, Vercel, Netlify</span>
+                        </li>
+
+                        <li class="skills__item">
+                            <img src="./img//icons/code.svg" alt="code icon" width="15">
+
+                            <span>Gulp, WebPack, Vite</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="lang">
+                    <h3 class="section-title">
+                        <span>Languages</span>
+
+                        <span>🕊️</span>
+                    </h3>
+
+                    <ul class="sidebar__list lang-list">
+                        <li class="lang-item">
+                            <img src="./img/icons/Flag_of_Ukraine_3.svg" alt="ua flag" width="20">
+
+                            <span>Ukrainian - native</span>
+                        </li>
+
+                        <li class="lang-item">
+                            <img
+                                src="./img/icons/Flag_of_the_United_Kingdom_(3-5).svg"
+                                alt="uk flag"
+                                width="20"
+                        >
+
+                            <span>English - intermediate (B1)</span>
+                        </li>
+
+                        <li class="lang-item">
+                            <img src="./img/icons/Flag_of_Russia.svg" alt="rus flag" width="20">
+
+                            <span>russian - fluent</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="edu" id="edu">
+                    <h3 class="section-title">
+                        <span>Education</span>
+
+                        <img src="./img/icons/courses.svg" alt="book" width="24">
+                    </h3>
+
+                    <ul class="sidebar__list edu__list">
+                        <li class="edu__item">
+                            <h4 class="edu__title-item">FRONTEND (11 month)</h4>
+
+                            <p class="edu__text">DAN.IT Education (certificate)</p>
+                        </li>
+
+                        <li class="edu__item">
+                            <h4 class="edu__title-item"> PROCESSING EQUIPMENT ENGINEER </h4>
+
+                            <p class="edu__text">
+                                Donetsk National University of Economics and Trade<br>
+                                Specialist (diploma)
+                            </p>
+                        </li>
+
+                        <li class="edu__item">
+                            <h4 class="edu__title-item"> FRONTEND. Courses: </h4>
+
+                            <ul class="sidebar__list edu__sublist">
+                                <li class="edu__sub-item"> EPAM: Frontend (certificate) </li>
+
+                                <li class="edu__sub-item"> RS-School: Frontend (certificate) </li>
+
+                                <li class="edu__sub-item">
+                                    Udemy: React, Redux (by M.Nepomnyaschiy)
+                                </li>
+
+                                <li class="edu__sub-item"> RS-School: Nodejs (in progress) </li>
+
+                                <li class="edu__sub-item"> Udemy: TypeScript (in progress) </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="section-title">
+                        <span>Сertificates</span>
+
+                        <span>📃</span>
+                    </h3>
+
+                    <a class="cert__link" href="./pages/certificates.html">click &#10153; here</a>
+                </section>
+
+                <section class="code">
+                    <h3 class="section-title sidebar-sert">
+                        <span>Code</span>
+
+                        <span class="code__btn-wrap">
+                            <span class="code__click">click &#10153;</span>
+
+                            <button class="code__btn">
+                                <img src="./img/icons/code.svg" alt="code" width="20">
+                            </button>
+                        </span>
+                    </h3>
+
+                    <h4 class="code__title">Count characters in your string</h4>
+
+                    <p class="code__text">
+                        The main idea is to count all the occurring characters in a string. If you
+                        have a string like
+
+                        <span>"aba"</span>
+
+                        , then the result should be {'a': 2, 'b': 1}. What if the string is empty?
+                        Then the result should be empty object literal, {}.
+
+                        <br>
+                        <br>
+                        Click on button
+
+                        <img src="./img/icons/code.svg" alt="code icon" width="14">
+
+                        to see the code
+                    </p>
+
+                    <div class="code_wrap" id="code">
+                        <code>
+                            <span class="code__span">
+                                function count(string) {
+
+                                <br>
+                                &nbsp;&nbsp;return string.split("").reduce((obj, prop) =&gt;{
+
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;obj[prop] = (obj[prop] || 0) + 1;
+
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return obj;
+
+                                <br>
+                                &nbsp;&nbsp;},{})
+
+                                <br>
+                                }
+                            </span>
+                        </code>
+
+                        <div class="close">✖</div>
+                    </div>
+                </section>
+            </aside>
+            <footer>
+                <ul class="footer__list">
+                    <li>
+                        <a href="https://github.com/AlexHiriavenko" target="_blank"
+                            ><img src="./img/icons/github.svg" alt="logo github" width="46"
+                    ></a>
+                    </li>
+                    <li><time datetime="2023">November 2023</time></li>
+                    <li>
+                        <a href="https://rs.school/js-en/" target="_blank"
+                            ><img src="./img/icons/rsschool.svg" alt="logo rsschool" width="100">
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+
+        <script src="./js/index.js"></script>
+    </body>
+</html>
