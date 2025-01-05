@@ -1,0 +1,35 @@
+@import "../styles/reset";
+@import "../styles/mixins";
+@import "../styles/variables";
+@import "../styles/style";
+@import "./components/main/main";
+@import "./components/cards-list/cards-list";
+@import "./components/modal/modal";
+
+.nav-list__link {
+  color: $textColorDark !important;
+}
+
+header .menu-link {
+  &::before {
+    transform: scaleX(1);
+    opacity: 1;
+    bottom: -4px;
+  }
+  pointer-events: none;
+}
+
+.social-media__link svg {
+  color: $textColorLight;
+}
+
+.social-media__link:hover svg {
+  color: $textColorDark;
+}
+
+@media (max-width: 769px) {
+  header .menu-link {
+    pointer-events: all;
+    cursor: default;
+  }
+}

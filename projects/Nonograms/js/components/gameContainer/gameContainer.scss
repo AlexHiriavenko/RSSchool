@@ -1,0 +1,62 @@
+@import "../../nonograms/nonogramStyles/nonograms";
+
+.game-container {
+  @include flex-center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-block: 20px;
+  min-width: 640px;
+  min-height: calc(100vh - 64px - 20px - 40px - 46px);
+  @include tablet {
+    margin-block: 12px;
+    min-width: auto;
+    min-height: calc(100vh - 64px - 20px - 104px - 24px);
+  }
+  gap: 20px;
+  .banner-container {
+    @include flex-center;
+    max-width: 28%;
+    @include tablet {
+      display: none;
+    }
+  }
+  .table-container {
+    @include flex-center;
+    min-width: 50%;
+    min-height: 400px;
+    border: 1px solid var(--secondary-bg-color);
+    padding: 10px;
+    overflow-x: auto;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      min-width: auto;
+      border: none;
+      padding: 0;
+      flex-direction: column;
+    }
+  }
+  .timer-section {
+    width: 100%;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+
+  .timer-section span {
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.banner {
+  width: 280px;
+  max-width: 100%;
+}
+
+.message-unselected {
+  font-size: 36px;
+  color: var(--main-text-color);
+  text-align: center;
+}

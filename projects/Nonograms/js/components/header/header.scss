@@ -1,0 +1,15 @@
+@import "./appTitle/appTitle";
+@import "./headerBtnGroup/headerBtnGroup";
+
+header {
+  background-color: var(--secondary-bg-color);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
+}

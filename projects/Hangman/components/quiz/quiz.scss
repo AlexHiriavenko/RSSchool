@@ -1,0 +1,67 @@
+.quiz-container {
+  max-width: 660px;
+  margin-inline: auto;
+}
+
+.counter-title,
+.answer-text {
+  font-family: "Rubik Maps", system-ui;
+  font-size: 32px;
+  color: white;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.counter {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -4px;
+  &.mini-alert {
+    color: rgb(255, 255, 3);
+  }
+  &.alert {
+    color: rgb(253, 111, 59);
+  }
+  &.extra-alert {
+    color: rgb(214, 1, 1);
+  }
+}
+
+.counter-text {
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 22px;
+  font-weight: 600;
+  color: lightgrey;
+  margin-top: 40px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.answer-text {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  line-height: 1.4;
+}
+
+@media (max-width: 769px) {
+  .counter-title {
+    margin-top: 0;
+  }
+  .question-text {
+    margin-top: 20px;
+    word-break: break-all;
+  }
+  .answer-text {
+    font-size: 36px;
+  }
+}

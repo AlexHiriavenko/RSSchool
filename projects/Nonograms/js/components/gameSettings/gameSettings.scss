@@ -1,0 +1,38 @@
+@import "./difficultyOptions/difficultyOptions";
+@import "./playerNameInput/playerNameInput";
+
+.settings-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  @include mobile {
+    margin-top: 22px;
+  }
+}
+
+.start-game-btn {
+  margin-top: 30px;
+  align-self: center;
+  color: white;
+  background-color: var(--btn-bg-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  @include mobile {
+    margin-top: 72px;
+  }
+  &:hover {
+    filter: brightness(1);
+  }
+}
+
+.form-title {
+  font-size: 24px;
+  text-align: center;
+  justify-self: center;
+  @include mobile {
+    margin-right: 34px;
+  }
+}

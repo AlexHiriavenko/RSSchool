@@ -1,0 +1,19 @@
+.random-settings-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  @include mobile {
+    margin-top: 60px;
+    gap: 22px;
+  }
+}
+
+.random-settings-text {
+  color: var(--main-text-color);
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 380px;
+  text-align: center;
+}

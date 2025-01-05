@@ -2,15 +2,23 @@
 
 ## Projects
 
--   [Library project](./projects/library)
+- [Library](./projects/library)
 
--   [Audio Player project](./projects/audio-player)
+- [Audio Player](./projects/audio-player)
 
--   [CSS-Slider project](./projects/cssMemeSlider)
+- [CSS-Slider](./projects/cssMemeSlider)
 
--   [Image-Gallery project](./projects/image-gallery)
+- [Image-Gallery](./projects/image-gallery)
 
--   [Tic-Tac-Toe project](./projects/tic-tac-toe)
+- [Tic-Tac-Toe](./projects/tic-tac-toe)
+
+- [Coffee-House](./projects/Coffee-House)
+
+- [Hangman](./projects/Hangman)
+
+- [News-Api](./projects/news-api)
+
+- [Nonograms](./projects/Nonograms)
 
 ## Exercises
 

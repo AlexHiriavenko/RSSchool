@@ -1,0 +1,108 @@
+.gallows {
+  // border: 1px solid white;
+  width: 25%;
+  min-width: 210px;
+  margin-inline: auto;
+  position: relative;
+  & .body-part {
+    transition-duration: 1s;
+    opacity: 0;
+  }
+
+  & .body-part.visible {
+    opacity: 1;
+  }
+}
+
+.game-logo,
+.gallows__img {
+  display: block;
+}
+
+.gallows__head {
+  border-radius: 50%;
+  position: absolute;
+  top: 284px;
+  left: 145px;
+  width: 48px;
+}
+
+.gallows__body {
+  position: absolute;
+  top: calc(284px + 44px);
+  left: 140px;
+  width: 48px;
+}
+
+.gallows__lhand {
+  position: absolute;
+  top: 327px;
+  left: 130px;
+  width: 27px;
+}
+
+.gallows__rhand {
+  position: absolute;
+  top: 326px;
+  left: 174px;
+  width: 27px;
+}
+
+.gallows__lleg {
+  position: absolute;
+  top: 376px;
+  left: 140px;
+  width: 27px;
+}
+
+.gallows__rleg {
+  position: absolute;
+  top: 374px;
+  left: 167px;
+  width: 20px;
+}
+
+@media (max-width: 769px) {
+  .game-logo {
+    display: none;
+  }
+  .gallows__img {
+    width: 140px;
+  }
+
+  .gallows__head {
+    top: 53px;
+    left: 93px;
+    width: 48px;
+  }
+
+  .gallows__body {
+    top: 99px;
+    left: 89px;
+    width: 48px;
+  }
+
+  .gallows__lhand {
+    top: 97px;
+    left: 79px;
+    width: 27px;
+  }
+
+  .gallows__rhand {
+    top: 98px;
+    left: 123px;
+    width: 27px;
+  }
+
+  .gallows__lleg {
+    top: 146px;
+    left: 88px;
+    width: 27px;
+  }
+
+  .gallows__rleg {
+    top: 144px;
+    left: 116px;
+    width: 20px;
+  }
+}

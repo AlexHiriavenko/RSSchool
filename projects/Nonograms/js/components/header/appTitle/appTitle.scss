@@ -1,0 +1,11 @@
+h1 {
+  font-size: 32px;
+  text-shadow: 1px 1px 1px var(--modal-cross-side2);
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 600;
+  @include mobile {
+    font-size: 22px;
+    letter-spacing: 0;
+  }
+}

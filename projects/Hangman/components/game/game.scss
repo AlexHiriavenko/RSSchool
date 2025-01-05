@@ -1,0 +1,25 @@
+.game {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-inline: 10px;
+  // border: 1px solid red;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 769px) {
+  .game {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+}
+
+@import "../gallows/gallows";
+@import "../quiz/quiz";
+@import "../keyboard/keyboard";
