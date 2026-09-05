@@ -2,7 +2,7 @@
 
 ## url:
 
-https://rolling-scopes-school.github.io/tsmika-JSFEPRESCHOOL2023Q2/library/
+https://rolling-scopes-school.github.io/alexhiriavenko-JSFEPRESCHOOL2023Q2/library/
 
 ## Task and Terms:
 

@@ -1,4 +1,6 @@
 # news-JS
+#### Deploy URL:
+https://alexhiriavenko.github.io/RSSchool/news-api/
 
 #### Run application:
 
