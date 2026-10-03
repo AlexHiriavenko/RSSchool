@@ -2,15 +2,21 @@
   "name": "memory-game",
   "version": "1.0.0",
   "description": "RSScool Full-Stack JS Course 2026 Q3",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npx vite build && npx gh-pages -d dist -e memory-game",
     "prepare": "cd ../.. && husky projects/memory-game/.husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "^9.1.7"
+    "gh-pages": "^6.3.0",
+    "husky": "^9.1.7",
+    "vite": "^8.2.2"
   }
 }
