@@ -8,8 +8,8 @@ function createStat(label) {
 
 /** Счётчики ходов и найденных пар. */
 export function createStats({ totalPairs }) {
-  const moves = createStat('Ходы');
-  const pairs = createStat('Пары');
+  const moves = createStat('Ходы:');
+  const pairs = createStat('Пары:');
   const element = el('div', { class: 'stats', attrs: { 'aria-live': 'polite' } }, moves.item, pairs.item);
 
   function render({ moves: movesCount, matchedPairs }) {
