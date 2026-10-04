@@ -35,5 +35,9 @@ export function createBoard({ onCardClick }) {
     element.replaceChildren(...cards.map(createCard));
   }
 
-  return { element, render };
+  function setLocked(isLocked) {
+    element.classList.toggle('board--locked', isLocked);
+  }
+
+  return { element, render, setLocked };
 }
