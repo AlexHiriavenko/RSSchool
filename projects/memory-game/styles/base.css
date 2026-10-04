@@ -1,6 +1,10 @@
 :root {
   --color-bg: #1e1f2b;
   --color-text: #f2f2f7;
+  --color-accent: #7c83ff;
+  --color-success: #4ade80;
+  --color-card-back: #3a3d5c;
+  --color-card-face: #f2f2f7;
   --font-main: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
