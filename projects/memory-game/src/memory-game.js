@@ -1,16 +1,18 @@
-import { EMOJIS, MISMATCH_DELAY } from './config.js';
+import { EMOJIS, MISMATCH_DELAY, WIN_MODAL_DELAY } from './config.js';
 import { FLIP_RESULT, Game } from './core/game.js';
-import { loadResults } from './core/leaderboard.js';
+import { addResult, loadResults } from './core/leaderboard.js';
 import { createBoard } from './ui/board.js';
 import { createHeader } from './ui/header.js';
 import { openLeaderboardModal } from './ui/leaderboard-modal.js';
 import { createStats } from './ui/stats.js';
+import { openWinModal } from './ui/win-modal.js';
 import { el } from './utils/dom.js';
 
 export const memoryGame = {
   init() {
     const game = new Game(EMOJIS);
     let mismatchTimer = null;
+    let winTimer = null;
 
     const header = createHeader({ onNewGame: startNewGame, onLeaderboard: showLeaderboard });
     const board = createBoard({ onCardClick: handleCardClick });
@@ -22,13 +24,15 @@ export const memoryGame = {
       stats.render(game);
     }
 
-    function cancelMismatchTimer() {
+    function cancelTimers() {
       clearTimeout(mismatchTimer);
+      clearTimeout(winTimer);
       mismatchTimer = null;
+      winTimer = null;
     }
 
     function startNewGame() {
-      cancelMismatchTimer();
+      cancelTimers();
       game.start();
       renderGame();
     }
@@ -42,6 +46,14 @@ export const memoryGame = {
       if (result === FLIP_RESULT.IGNORED) return;
 
       renderGame();
+
+      if (result === FLIP_RESULT.WIN) {
+        addResult(game.moves);
+        winTimer = setTimeout(() => {
+          winTimer = null;
+          openWinModal({ moves: game.moves, onNewGame: startNewGame });
+        }, WIN_MODAL_DELAY);
+      }
 
       if (result === FLIP_RESULT.MISMATCH) {
         mismatchTimer = setTimeout(() => {
