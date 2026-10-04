@@ -1,0 +1,22 @@
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.leaderboard th,
+.leaderboard td {
+  padding: 8px;
+  border-bottom: 1px solid var(--color-card-back);
+}
+
+.leaderboard th {
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.leaderboard__empty {
+  margin: 0;
+  text-align: center;
+  opacity: 0.7;
+}
