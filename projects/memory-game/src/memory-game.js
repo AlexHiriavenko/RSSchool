@@ -1,7 +1,9 @@
 import { EMOJIS, MISMATCH_DELAY } from './config.js';
 import { FLIP_RESULT, Game } from './core/game.js';
+import { loadResults } from './core/leaderboard.js';
 import { createBoard } from './ui/board.js';
 import { createHeader } from './ui/header.js';
+import { openLeaderboardModal } from './ui/leaderboard-modal.js';
 import { createStats } from './ui/stats.js';
 import { el } from './utils/dom.js';
 
@@ -10,7 +12,7 @@ export const memoryGame = {
     const game = new Game(EMOJIS);
     let mismatchTimer = null;
 
-    const header = createHeader({ onNewGame: startNewGame, onLeaderboard: () => {} });
+    const header = createHeader({ onNewGame: startNewGame, onLeaderboard: showLeaderboard });
     const board = createBoard({ onCardClick: handleCardClick });
     const stats = createStats({ totalPairs: game.totalPairs });
 
@@ -29,6 +31,10 @@ export const memoryGame = {
       cancelMismatchTimer();
       game.start();
       renderGame();
+    }
+
+    function showLeaderboard() {
+      openLeaderboardModal(loadResults());
     }
 
     function handleCardClick(cardId) {
