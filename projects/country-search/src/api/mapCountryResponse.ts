@@ -1,4 +1,4 @@
-import type { RawCountry } from './types';
+import type { RawCountry } from './types.js';
 
 export interface Country {
     name: string;

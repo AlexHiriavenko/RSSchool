@@ -5,8 +5,8 @@
     "type": "module",
     "scripts": {
         "build": "tsc && node scripts/copy-static.mjs",
-        "dev": "tsc --watch",
-        "start": "npx serve dist",
+        "dev": "npm run build && concurrently -k -n tsc,static,serve \"tsc --watch --preserveWatchOutput\" \"node --watch-path=public scripts/copy-static.mjs\" \"serve dist -l 3000\"",
+        "start": "serve dist -l 3000",
         "lint": "eslint .",
         "format": "prettier --write .",
         "test": "vitest run",
@@ -17,12 +17,14 @@
     "devDependencies": {
         "@eslint/js": "^10.0.1",
         "@types/node": "^26.6.6",
+        "concurrently": "^10.0.7",
         "eslint": "^10.15.0",
         "eslint-config-prettier": "^10.1.8",
         "gh-pages": "^6.3.0",
         "husky": "^9.1.7",
         "lint-staged": "^17.6.1",
         "prettier": "^3.10.1",
+        "serve": "^14.2.8",
         "typescript": "^6.0.3",
         "typescript-eslint": "^8.73.0",
         "vitest": "^5.1.0"

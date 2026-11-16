@@ -1,7 +1,7 @@
-import { classifyError, type ErrorKind } from '../api/errors';
-import { mapCountryResponse, type Country } from '../api/mapCountryResponse';
-import { searchCountries } from '../api/searchCountries';
-import { debounce } from '../utils/debounce';
+import { classifyError, type ErrorKind } from '../api/errors.js';
+import { mapCountryResponse, type Country } from '../api/mapCountryResponse.js';
+import { searchCountries } from '../api/searchCountries.js';
+import { debounce } from '../utils/debounce.js';
 
 export const DEFAULT_DEBOUNCE_MS = 300;
 
