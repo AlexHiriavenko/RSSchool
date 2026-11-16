@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { SearchController, type SearchState } from './searchController';
+import { SearchHistory } from './searchHistory';
 
 const germany = { name: 'Germany', capital: 'Berlin', region: 'Europe', population: 83240525 };
 
@@ -173,6 +174,69 @@ describe('SearchController', () => {
 
             expect(fetchMock).not.toHaveBeenCalled();
             expect(controller.getState()).toEqual({ status: 'idle' });
+        });
+    });
+
+    describe('cache and history integration', () => {
+        function memoryHistory(): SearchHistory {
+            const data = new Map<string, string>();
+            return new SearchHistory({
+                getItem: (key) => data.get(key) ?? null,
+                setItem: (key, value) => void data.set(key, value),
+            });
+        }
+
+        it('answers a repeated query from the cache without a second request', async () => {
+            fetchMock.mockImplementation(() => Promise.resolve(jsonResponse([germany])));
+            const controller = new SearchController();
+
+            await controller.search('ger');
+            await controller.search('fra');
+            await controller.search('GER');
+
+            const urls = fetchMock.mock.calls.map((call) => call[0]);
+            expect(urls).toEqual([
+                'https://countries.dev/name/ger',
+                'https://countries.dev/name/fra',
+            ]);
+            expect(controller.getState()).toMatchObject({ status: 'success', query: 'GER' });
+        });
+
+        it('records successful queries in the history', async () => {
+            fetchMock.mockImplementation(() => Promise.resolve(jsonResponse([germany])));
+            const history = memoryHistory();
+            const controller = new SearchController({ history });
+
+            await controller.search('ger');
+            await controller.search('fra');
+
+            expect(history.getAll()).toEqual(['fra', 'ger']);
+        });
+
+        it('does not record empty input, empty results or errors', async () => {
+            const history = memoryHistory();
+            const controller = new SearchController({ history });
+
+            await controller.search('');
+            fetchMock.mockResolvedValueOnce(new Response('nope', { status: 404 }));
+            await controller.search('zzzz');
+            fetchMock.mockResolvedValueOnce(new Response('boom', { status: 500 }));
+            await controller.search('ger');
+
+            expect(history.getAll()).toEqual([]);
+        });
+
+        it('an immediate search cancels a pending debounced one', async () => {
+            vi.useFakeTimers();
+            fetchMock.mockImplementation(() => Promise.resolve(jsonResponse([germany])));
+            const controller = new SearchController({ debounceMs: 300 });
+
+            controller.input('fra');
+            await controller.search('ger');
+            await vi.advanceTimersByTimeAsync(1000);
+
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+            expect(controller.getState()).toMatchObject({ query: 'ger' });
         });
     });
 });

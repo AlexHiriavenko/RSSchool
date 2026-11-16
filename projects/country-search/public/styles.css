@@ -279,3 +279,62 @@ body {
         text-align: left;
     }
 }
+
+.history {
+    max-width: 560px;
+    margin: 0 auto 24px;
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.history-title {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.history-clear {
+    font: inherit;
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.history-clear:hover {
+    color: var(--text);
+}
+
+.history-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.history-chip {
+    padding: 6px 14px;
+    font: inherit;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.history-chip:hover,
+.history-chip:focus-visible {
+    border-color: var(--accent);
+    outline: none;
+}

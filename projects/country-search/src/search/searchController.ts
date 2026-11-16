@@ -1,7 +1,10 @@
 import { classifyError, type ErrorKind } from '../api/errors.js';
 import { mapCountryResponse, type Country } from '../api/mapCountryResponse.js';
 import { searchCountries } from '../api/searchCountries.js';
+import type { RawCountry } from '../api/types.js';
 import { debounce } from '../utils/debounce.js';
+import { createCachedSearch, type SearchFn } from './cachedSearch.js';
+import type { SearchHistory } from './searchHistory.js';
 
 export const DEFAULT_DEBOUNCE_MS = 300;
 
@@ -17,6 +20,10 @@ export type SearchListener = (state: SearchState) => void;
 export interface SearchControllerOptions {
     debounceMs?: number;
     timeoutMs?: number;
+    /** Replaces the default (cached) search; mainly for tests. */
+    search?: SearchFn<RawCountry[]>;
+    /** If given, every successful query is recorded here. */
+    history?: SearchHistory;
 }
 
 /**
@@ -29,11 +36,20 @@ export class SearchController {
     private readonly listeners = new Set<SearchListener>();
     private currentRequest: AbortController | null = null;
     private lastQuery = '';
-    private readonly timeoutMs: number | undefined;
+    private readonly searchFn: SearchFn<RawCountry[]>;
+    private readonly history: SearchHistory | undefined;
     private readonly debouncedSearch: ReturnType<typeof debounce<[string]>>;
 
-    constructor({ debounceMs = DEFAULT_DEBOUNCE_MS, timeoutMs }: SearchControllerOptions = {}) {
-        this.timeoutMs = timeoutMs;
+    constructor({
+        debounceMs = DEFAULT_DEBOUNCE_MS,
+        timeoutMs,
+        search,
+        history,
+    }: SearchControllerOptions = {}) {
+        this.searchFn =
+            search ??
+            createCachedSearch((query, signal) => searchCountries(query, signal, { timeoutMs }));
+        this.history = history;
         this.debouncedSearch = debounce((query: string) => void this.search(query), debounceMs);
     }
 
@@ -69,6 +85,8 @@ export class SearchController {
     async search(rawQuery: string): Promise<void> {
         const query = rawQuery.trim();
 
+        this.debouncedSearch.cancel(); // an immediate search supersedes a pending typed one
+
         this.currentRequest?.abort();
         this.currentRequest = null;
 
@@ -84,12 +102,11 @@ export class SearchController {
         this.setState({ status: 'loading', query });
 
         try {
-            const raw = await searchCountries(query, request.signal, {
-                timeoutMs: this.timeoutMs,
-            });
+            const raw = await this.searchFn(query, request.signal);
             if (this.isStale(request)) return;
 
             const countries = mapCountryResponse(raw);
+            if (countries.length > 0) this.history?.add(query);
             this.setState(
                 countries.length > 0
                     ? { status: 'success', query, countries }
