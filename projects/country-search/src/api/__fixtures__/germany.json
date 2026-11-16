@@ -1,0 +1,30 @@
+[
+    {
+        "area": 357114,
+        "cioc": "GER",
+        "flag": "🇩🇪",
+        "gini": 31.9,
+        "name": "Germany",
+        "flags": { "png": "https://flagcdn.com/w320/de.png", "svg": "https://flagcdn.com/de.svg" },
+        "latlng": [51, 9],
+        "region": "Europe",
+        "borders": ["AUT", "BEL", "CZE", "DNK", "FRA", "LUX", "NLD", "POL", "CHE"],
+        "capital": "Berlin",
+        "demonym": "German",
+        "languages": [
+            { "name": "German", "iso639_1": "de", "iso639_2": "deu", "nativeName": "Deutsch" }
+        ],
+        "subregion": "Central Europe",
+        "timezones": ["UTC+01:00"],
+        "alpha2Code": "DE",
+        "alpha3Code": "DEU",
+        "currencies": [{ "code": "EUR", "name": "Euro", "symbol": "€" }],
+        "nativeName": "Deutschland",
+        "population": 83240525,
+        "independent": true,
+        "numericCode": "276",
+        "callingCodes": ["49"],
+        "topLevelDomain": [".de"],
+        "populationDensity": 233.09
+    }
+]
