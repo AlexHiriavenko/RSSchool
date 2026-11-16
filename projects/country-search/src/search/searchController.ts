@@ -62,8 +62,13 @@ export class SearchController {
         return () => this.listeners.delete(listener);
     }
 
-    /** Entry point for typing: empty input is handled immediately, other input is debounced. */
+    /**
+     * Entry point for typing. The in-flight request is cancelled on every input change,
+     * not only when the debounce fires: its result is already outdated. Empty input is
+     * handled immediately, other input is debounced.
+     */
     input(query: string): void {
+        this.abortCurrentRequest();
         if (!query.trim()) {
             this.debouncedSearch.cancel();
             void this.search('');
@@ -87,8 +92,7 @@ export class SearchController {
 
         this.debouncedSearch.cancel(); // an immediate search supersedes a pending typed one
 
-        this.currentRequest?.abort();
-        this.currentRequest = null;
+        this.abortCurrentRequest();
 
         if (!query) {
             this.lastQuery = '';
@@ -119,6 +123,11 @@ export class SearchController {
             if (kind === 'aborted') return;
             this.setState({ status: 'error', query, kind });
         }
+    }
+
+    private abortCurrentRequest(): void {
+        this.currentRequest?.abort();
+        this.currentRequest = null;
     }
 
     private isStale(request: AbortController): boolean {

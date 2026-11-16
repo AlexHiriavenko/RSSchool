@@ -163,6 +163,39 @@ describe('SearchController', () => {
             expect(fetchMock.mock.calls[0]?.[0]).toBe('https://countries.dev/name/ger');
         });
 
+        it('aborts the in-flight request on every input change, before debounce fires', async () => {
+            const fetchHang = hangingFetch();
+            vi.stubGlobal('fetch', fetchHang);
+            const controller = new SearchController({ debounceMs: 300 });
+
+            const pending = controller.search('ger');
+            const init = fetchHang.mock.calls[0]?.[1] as RequestInit;
+            expect(init.signal?.aborted).toBe(false);
+
+            controller.input('germ'); // debounce has not fired yet
+            expect(init.signal?.aborted).toBe(true);
+
+            await pending;
+            expect(controller.getState()).toEqual({ status: 'loading', query: 'ger' });
+            controller.input('');
+        });
+
+        it('still searches for the latest input after the in-flight request was aborted', async () => {
+            fetchMock.mockImplementation(() => Promise.resolve(jsonResponse([germany])));
+            const fetchHang = hangingFetch();
+            vi.stubGlobal('fetch', fetchHang);
+            const controller = new SearchController({ debounceMs: 300 });
+
+            void controller.search('ger');
+            controller.input('germ');
+            vi.stubGlobal('fetch', fetchMock);
+            await vi.advanceTimersByTimeAsync(300);
+
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+            expect(fetchMock.mock.calls[0]?.[0]).toBe('https://countries.dev/name/germ');
+            expect(controller.getState()).toMatchObject({ status: 'success', query: 'germ' });
+        });
+
         it('empty input clears results immediately and drops the pending search', async () => {
             const controller = new SearchController({ debounceMs: 300 });
             const states: SearchState[] = [];

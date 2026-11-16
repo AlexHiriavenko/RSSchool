@@ -42,10 +42,14 @@ keep the connection busy. So outdated requests are actually cancelled.
 
 1. **One `AbortController` per request.**
    [`SearchController.search()`](src/search/searchController.ts) first aborts the previous
-   controller (`this.currentRequest?.abort()`), then creates a new one. Calling `fetch` with
-   the aborted signal makes it reject with an `AbortError` and the browser marks the request
-   as `canceled` in the Network tab. The `fetch` call itself happens synchronously, before
-   the first `await`, so the old request is always aborted before the new one starts.
+   controller (`abortCurrentRequest()`), then creates a new one. Aborting makes `fetch`
+   reject with an `AbortError` and the browser marks the request as `canceled` in the
+   Network tab. The `fetch` call itself happens synchronously, before the first `await`, so
+   the old request is always aborted before the new one starts.
+
+    The in-flight request is also aborted **on every input change**, in `input()`, before the
+    debounce timer fires. The user has already changed the text, so the result of the old
+    request is outdated and there is no reason to keep downloading it for the next 300 ms.
 
 2. **A stale-response guard** (`isStale`). After every `await` the controller checks that
    its own request is still the current one. A superseded request never touches the state,
