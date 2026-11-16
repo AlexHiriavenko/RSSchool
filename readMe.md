@@ -20,6 +20,8 @@
 
 - [Nonograms](./projects/Nonograms)
 
+- [Country Search](./projects/country-search)
+
 ## Exercises
 
 [see more](./exercises)
